@@ -26,6 +26,7 @@ struct menu_item {
   void (*handler)(void);
 };
 
+#include "digital_read.h"
 #include "demo_text1.h"
 #include "demo_text2.h"
 #include "demo_greyscale1.h"
@@ -47,6 +48,7 @@ const struct menu_item demoMenu[] = {
 #ifdef I2C_MPR121_ADDR
     {"mpr121 touch demo", &demoMpr121},
 #endif // I2C_MPR121_ADDR
+    {"digital_read", &digital_read},
     {"text demo 1", &demoText1},
     {"text demo 2", &demoText2},
     {"greyscale 1", &demoGreyscale1},
