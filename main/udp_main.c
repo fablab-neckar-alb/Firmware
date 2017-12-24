@@ -14,7 +14,7 @@ static void udp_conn(void *pvParameters)
 {
     ESP_LOGI(TAG, "task udp_conn start.");
     /*wating for connecting to AP*/
-    xEventGroupWaitBits(udp_event_group, WIFI_CONNECTED_BIT,false, true, portMAX_DELAY);
+    //xEventGroupWaitBits(udp_event_group, WIFI_CONNECTED_BIT,false, true, portMAX_DELAY);
     ESP_LOGI(TAG, "sta has connected to ap.");
     
     /*create udp socket*/

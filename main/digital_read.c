@@ -12,6 +12,7 @@
 #include "driver/gpio.h"
 
 #include <font.h>
+#include "udp_main.h"
 //bei uns pin 0
 #define READ_GPIO PIN_NUM_EXT_IO_4
 //bei uns pin 1
@@ -20,6 +21,8 @@
 void
 digital_read(void)
 {
+
+   udp_main();
 	esp_err_t err = badge_eink_fb_init();
 	assert( err == ESP_OK );
 
